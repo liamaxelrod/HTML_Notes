@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bubbles Templates</title>
+</head>
+<body>
+
+<!-- ======================== TEMPLATE: div ======================== -->
+
+    <template id="Div">
+        <div class="bubble">
+            <h3>&lt;div&gt; Basics & Uses</h3>
+            <p>
+            The &lt;div&gt; element is a block-level container used to group HTML content. You can have many of them on a page.
+            Below are common layout techniques using &lt;div&gt;:
+            </p>
+
+            <!-- === CODE BLOCKS === -->
+            <div class="code-block">
+            <h4>1. Basic div</h4>
+            <code>&lt;div&gt;A block container&lt;/div&gt;</code>
+
+            <h4>2. Centered div</h4>
+            <code>&lt;div style="width:200px;margin:auto;background:#f8d7da;"&gt;Centered&lt;/div&gt;</code>
+
+            <h4>3. Side-by-Side with float</h4>
+            <code>
+                &lt;div style="float:left;width:45%;background:#d1ecf1;"&gt;Left&lt;/div&gt;<br>
+                &lt;div style="float:right;width:45%;background:#d4edda;"&gt;Right&lt;/div&gt;
+            </code>
+
+            <h4>4. Side-by-Side with inline-block</h4>
+            <code>
+                &lt;div style="display:inline-block;width:45%;background:#f8d7da;"&gt;A&lt;/div&gt;<br>
+                &lt;div style="display:inline-block;width:45%;background:#d1ecf1;"&gt;B&lt;/div&gt;
+            </code>
+
+            <h4>5. Side-by-Side with flex</h4>
+            <code>
+                &lt;div style="display:flex;"&gt;<br>
+                &nbsp;&nbsp;&lt;div style="flex:1;background:#d4edda;"&gt;1&lt;/div&gt;<br>
+                &nbsp;&nbsp;&lt;div style="flex:1;background:#f8d7da;"&gt;2&lt;/div&gt;<br>
+                &lt;/div&gt;
+            </code>
+
+            <h4>6. Side-by-Side with grid</h4>
+            <code>
+                &lt;div style="display:grid;grid-template-columns:1fr 1fr;"&gt;<br>
+                &nbsp;&nbsp;&lt;div style="background:#d1ecf1;"&gt;Left&lt;/div&gt;<br>
+                &nbsp;&nbsp;&lt;div style="background:#d4edda;"&gt;Right&lt;/div&gt;<br>
+                &lt;/div&gt;
+            </code>
+            </div>
+
+            <!-- === EXAMPLES === -->
+            <div class="example">
+            <h4>1. Basic div</h4>
+            <div style="background:#e3e3e3;padding:5px;">A block container</div>
+
+            <h4>2. Centered div</h4>
+            <div style="width:200px;margin:auto;background:#f8d7da;padding:5px;">Centered</div>
+
+            <h4>3. Side-by-Side with float</h4>
+            <div style="overflow:hidden;">
+                <div style="float:left;width:45%;background:#d1ecf1;padding:5px;">Left</div>
+                <div style="float:right;width:45%;background:#d4edda;padding:5px;">Right</div>
+            </div>
+
+            <h4>4. Side-by-Side with inline-block</h4>
+            <div>
+                <div style="display:inline-block;width:45%;background:#f8d7da;padding:5px;">A</div>
+                <div style="display:inline-block;width:45%;background:#d1ecf1;padding:5px;">B</div>
+            </div>
+
+            <h4>5. Side-by-Side with flex</h4>
+            <div style="display:flex;">
+                <div style="flex:1;background:#d4edda;padding:5px;">1</div>
+                <div style="flex:1;background:#f8d7da;padding:5px;">2</div>
+            </div>
+
+            <h4>6. Side-by-Side with grid</h4>
+            <div style="display:grid;grid-template-columns:1fr 1fr;">
+                <div style="background:#d1ecf1;padding:5px;">Left</div>
+                <div style="background:#d4edda;padding:5px;">Right</div>
+            </div>
+            </div>
+
+            <!-- Explanation Summary -->
+            <p>
+            <strong>Centering:</strong> use <code>margin:auto</code> with a set width.<br>
+            <strong>Float:</strong> older method, must clear floats.<br>
+            <strong>Inline-block:</strong> aligns without floats, avoids float quirks.<br>
+            <strong>Flex:</strong> modern, easy to align and space divs.<br>
+            <strong>Grid:</strong> good for multi-row layouts with precise control.
+            </p>
+        </div>
+    </template>
+
+</body>
+</html>
+
+<!-- 
+
+ -->

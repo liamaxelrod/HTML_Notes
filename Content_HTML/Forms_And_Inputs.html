@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Explanation</title>
+  <link rel="stylesheet" href="/CSS/Styles.css">
+  <link rel="icon" type="images/favicon.ico" href="/Images/favicon.ico" />
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="/index.html" onclick="event.preventDefault(); alert('Home link is not active yet.');">Home</a></li>
+      <li><a href="/HTML_home.html">Home HTML</a></li> <!-- Renamed from "HTML home" -->
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" onclick="event.preventDefault()">Content ▾</a>
+        <div class="dropdown-content">
+          <a href="/Content_HTML/Basics.html">Basics</a>
+          <a href="/Content_HTML/JavaScript_With_HTML.html">JavaScript with HTML</a>
+          <a href="/Content_HTML/Content_And_Text_Formatting.html">Content & Text Formatting</a>
+          <a href="/Content_HTML/Forms_And_Inputs.html">Forms & Inputs</a>
+          <a href="/Content_HTML/Layout_And_Styling.html">Layout & Styling</a>
+          <a href="/Content_HTML/Media_And_Embedding.html">Media & Embedding</a>
+          <a href="/Content_HTML/Advanced_Topics.html">Advanced Topics</a>
+        </div>
+      </li>
+
+      <li><a href="/About.html"> About</a></li> <!-- Site-wide about -->
+    </ul>
+  </nav>
+
+  <!-- Bubble Slots -->
+  <div class="bubble-slot" data-id="HTML_forms"></div>
+  <div class="bubble-slot" data-id="Form_Attributes"></div>
+  <div class="bubble-slot" data-id="Form_Elements"></div>
+
+  <script src="/loadBubbles.js"></script>
+
+</body>
+</html>
+
+<!-- 
+
+-->

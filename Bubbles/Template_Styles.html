@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bubbles Templates</title>
+  </head>
+  <body>
+    
+    <!-- ======================== TEMPLATE: styles ======================== -->
+    <template id="Styles">
+      <div class="bubble">
+
+          <h3>styles</h3>
+
+          <h4>styles</h4>
+          <div class="code-block">
+              <code>
+                  &lt;p&gt; no styles &lt;span style="background-color: yellow;"&gt; styles &lt;/span&gt;&lt;/p&gt; <br>
+                  &lt;p&gt; no styles &lt;span style="border: 2px solid blue;"&gt; styles &lt;/span&gt;&lt;/p&gt; <br>
+                  &lt;p&gt; text &lt;span style="color: red;"&gt; text &lt;/span&gt;&lt;/p&gt; <br>
+                  &lt;p&gt; text &lt;span style="font-family: Fantasy;"&gt; text &lt;/span&gt;&lt;/p&gt; <br>
+                  &lt;p&gt; text &lt;span style="font-size: 70%;"&gt; text &lt;/span&gt;&lt;/p&gt; <br>
+                  &lt;p style="text-align: center;"&gt; This paragraph is center. &lt;/p&gt; <br>
+                  
+              </code>
+          </div>
+          
+          <div class="example">
+              <p> no styles <span style="background-color: yellow;"> with styles </span></p>
+              <p> no styles <span style="border:2px solid blue;""> with styles </samp></p>
+              <p> no styles <span style="color: red;"> with styles </span> </p> 
+              <p> no styles <span style="font-family: Fantasy;"> with styles </span></p>
+              <p> no styles <span style="font-size: 70%;"> with styles </span></p>
+              <p style="text-align:center;"> This style centers text. </p>
+          </div>
+
+          <br><!-- ======================== -->
+
+          <h4>styles with links</h4>
+          <div class="code-block">
+              <code>
+                  &lt;style&gt; <br>
+                  &nbsp;&nbsp;.example-style-link:link { <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;color: green; <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;background-color: transparent; <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none; <br>
+                  &nbsp;&nbsp;} <br>
+                  &nbsp;&nbsp;.example-style-link:visited { <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;color: pink; <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;background-color: transparent; <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none; <br>
+                  &nbsp;&nbsp;} <br>
+                  &nbsp;&nbsp;.example-style-link:hover { <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;color: red; <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;background-color: transparent; <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: underline; <br>
+                  &nbsp;&nbsp;} <br>
+                  &nbsp;&nbsp;.example-style-link:active { <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;color: yellow; <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;background-color: transparent; <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: underline; <br>
+                  &nbsp;&nbsp;} <br>
+                  &lt;/style&gt; <br><br>
+
+                  &lt;a href="../Home.html" class="example-style-link" target="_blank"&gt;Styled Link&lt;/a&gt; <br>
+                  &lt;a href="../Home.html" target="_blank"&gt;Styled Link&lt;/a&gt;
+              </code>
+          </div>
+          
+          <div class="example">
+              <style>
+              .example-style-link:link {
+                  color: green;
+                  background-color: transparent;
+                  text-decoration: none;
+              }
+              .example-style-link:visited {
+                  color: pink;
+                  background-color: transparent;
+                  text-decoration: none;
+              }
+              .example-style-link:hover {
+                  color: red;
+                  background-color: transparent;
+                  text-decoration: underline;
+              }
+              .example-style-link:active {
+                  color: yellow;
+                  background-color: transparent;
+                  text-decoration: underline;
+              }
+              </style>
+              <a href="../Home.html" class="example-style-link" target="_blank">Styled Link</a> <br>
+  <a href="../Home.html" target="_blank">Styled Link</a>
+          </div>
+
+          <br><!-- ======================== -->
+
+          <h4>styles background image</h4>
+          <div class="code-block">
+              <code>
+                  &lt;p style="background-image: url('https://images.pexels.com/photos/6808985/pexels-photo-6808985.jpeg');
+                  background-size: cover; 
+                  background-repeat: no-repeat; 
+                  background-position: center;
+                  color: white; 
+                  padding: 20px; "&gt;<br>
+                  all the text <br>
+                  &lt;/p&gt;
+              </code>
+          </div>
+          
+          <div class="example">
+              <p>
+                  <p style="background-image: url('https://images.pexels.com/photos/6808985/pexels-photo-6808985.jpeg');
+                  background-size: cover; 
+                  background-repeat: no-repeat; 
+                  background-position: center;
+                  color: white; /* optional: makes text readable */
+                  padding: 20px; /* optional: adds space inside */">
+                  You can put this in the style section Of the HTML document to affect the entire document. <br>
+                  background-size: cover; - makes the background image cover the entire element. <br>
+                  background-repeat: no-repeat; - prevents the background image from repeating. <br>  
+                  background-position: center; - centers the background image within the element. <br>
+                  color: white; - sets the text color to white for better readability against the background image. <br>
+                  padding: 20px; - adds padding around the text inside the paragraph for better spacing.
+                  </p>
+              </p>
+          </div>
+            
+      </div>
+    </template>
+
+  </body>
+</html>

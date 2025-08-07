@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bubble Template: Web APIs Overview</title>
+  <link rel="stylesheet" href="/CSS/Styles.css" />
+</head>
+<body>
+
+  <template id="Web_APIs">
+    <div class="bubble">
+      <h3>Introduction to Web APIs</h3>
+
+      <div class="code-block">
+        <code>
+<span class="code-color7">// Example: Simple Geolocation & Drag-and-Drop snippet</span><br>
+
+<span class="code-color7">if (navigator.geolocation) {</span><br>
+<span class="code-color7">&nbsp;&nbsp;navigator.geolocation.getCurrentPosition(showPosition, showError);</span><br>
+<span class="code-color7">} else {</span><br>
+<span class="code-color7">&nbsp;&nbsp;alert("Geolocation not supported.");</span><br>
+<span class="code-color7">}</span><br><br>
+
+<span class="code-color7">function showPosition(position) {</span><br>
+<span class="code-color7">&nbsp;&nbsp;console.log("Latitude: " + position.coords.latitude);</span><br>
+<span class="code-color7">&nbsp;&nbsp;console.log("Longitude: " + position.coords.longitude);</span><br>
+<span class="code-color7">}</span><br><br>
+
+<span class="code-color7">function showError(error) {</span><br>
+<span class="code-color7">&nbsp;&nbsp;alert("Error getting location: " + error.message);</span><br>
+<span class="code-color7">}</span><br><br>
+
+<span class="code-color6">&lt;img id="drag1" src="img.png" draggable="true" ondragstart="dragstartHandler(event)"&gt;</span><br>
+
+<span class="code-color6">function dragstartHandler(ev) {</span><br>
+<span class="code-color6">&nbsp;&nbsp;ev.dataTransfer.setData("text", ev.target.id);</span><br>
+<span class="code-color6">}</span><br><br>
+
+<span class="code-color6">&lt;div id="dropzone" ondragover="dragoverHandler(event)" ondrop="dropHandler(event)"&gt;Drop here&lt;/div&gt;</span><br>
+
+<span class="code-color6">function dragoverHandler(ev) { ev.preventDefault(); }</span><br>
+
+<span class="code-color6">function dropHandler(ev) {</span><br>
+<span class="code-color6">&nbsp;&nbsp;ev.preventDefault();</span><br>
+<span class="code-color6">&nbsp;&nbsp;const data = ev.dataTransfer.getData("text");</span><br>
+<span class="code-color6">&nbsp;&nbsp;ev.target.appendChild(document.getElementById(data));</span><br>
+<span class="code-color6">}</span>
+        </code>
+      </div>
+
+      <div class="example">
+        <p><strong>Live Geolocation Example:</strong> <span class="color-dot dot7"></span></p>
+        <button id="locateBtn">Get Location</button>
+        <p id="locationResult">Location will appear here.</p>
+
+        <script>
+          document.getElementById("locateBtn").onclick = () => {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(
+                (pos) => {
+                  const lat = pos.coords.latitude.toFixed(4);
+                  const lon = pos.coords.longitude.toFixed(4);
+                  document.getElementById("locationResult").textContent =
+                    `Latitude: ${lat}, Longitude: ${lon}`;
+                },
+                (err) => {
+                  document.getElementById("locationResult").textContent =
+                    "Error: " + err.message;
+                }
+              );
+            } else {
+              document.getElementById("locationResult").textContent =
+                "Geolocation not supported.";
+            }
+          };
+        </script>
+
+        <p><strong>Simple Drag and Drop:</strong> <span class="color-dot dot6"></span></p>
+        <img id="drag1" src="https://via.placeholder.com/100" draggable="true"
+             ondragstart="dragstartHandler(event)" alt="Draggable" style="border:1px solid black;">
+        <div id="dropzone" ondragover="dragoverHandler(event)" ondrop="dropHandler(event)"
+             style="width:150px; height:120px; border: 2px dashed #444; margin-top:10px; padding:5px;">
+          Drop here
+        </div>
+
+        <script>
+          function dragstartHandler(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+          }
+          function dragoverHandler(ev) {
+            ev.preventDefault();
+          }
+          function dropHandler(ev) {
+            ev.preventDefault();
+            const data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+          }
+        </script>
+      </div>
+
+      <p><strong>Explanation:</strong></p>
+      <p>
+        Web APIs allow web pages to interact with browser features and hardware. Here are some key APIs:<br><br>
+
+        <span class="ex-color7"><strong>Geolocation API</strong><span class="color-dot dot7"></span>:</span> Lets you get the user’s current location (latitude and longitude). Because it can expose private info, it asks the user for permission first and works only on HTTPS sites.<br><br>
+
+        <span class="ex-color6"><strong>Drag and Drop API</strong><span class="color-dot dot6"></span>:</span> Enables moving elements on a page by dragging and dropping them. To make an element draggable, add <code>draggable="true"</code> and handle drag events like <code>ondragstart</code>, <code>ondragover</code>, and <code>ondrop</code>.<br><br>
+
+        <strong>Web Storage API</strong>: Allows storing data locally in the browser using <code>localStorage</code> (persists after closing browser) or <code>sessionStorage</code> (cleared after tab closes). Useful for saving user preferences, counters, or temporary data.<br><br>
+
+        <strong>Web Workers API</strong>: Lets you run JavaScript code in the background without freezing the page, great for heavy tasks. Workers communicate with the page via messages but cannot access the DOM directly.<br><br>
+
+        <strong>Server-Sent Events (SSE) API</strong>: Enables a web page to receive automatic, real-time updates from a server over an open HTTP connection, useful for live news feeds, stock prices, or social media updates.<br><br>
+
+        Always remember to check browser support for the APIs you use and handle errors gracefully to maintain a good user experience.
+      </p>
+    </div>
+  </template>
+
+</body>
+</html>
+
+<!-- 
+
+-->

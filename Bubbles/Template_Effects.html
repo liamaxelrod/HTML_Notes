@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bubbles Templates</title>
+  </head>
+  <body>
+    
+    <!-- ======================== TEMPLATE: Effects ======================== -->
+
+    <template id="Effects">
+      <div class="bubble">
+          <h3>Effects</h3>
+          <h4>Special characters</h4>
+          <div class="code-block">
+              <code>
+                  &amp;amp; = & <br>
+                  &amp;lt; = < <br> 
+                  &amp;gt; = > <br> 
+                  &amp;quot; = " <br>
+              </code>
+          </div>
+          <div class="example">
+              <p>Use &amp;amp; to display the &amp; character</p>
+              <p>Use &amp;lt; to display the &lt; character</p>
+              <p>Use &amp;gt; to display the &gt; character</p>
+              <p>Use &amp;quot; to display the &amp; character</p>
+          </div> 
+          <br>
+          <p><strong>Find more Special characters just look them up.</strong></p>
+
+          <br><!-- ======================== -->
+
+          <h4>Anchor Link Within the Same Page</h4>
+          <div class="code-block">
+              <code>
+                  &lt;p&gt; text &lt;a href="#String_tags"&gt; text&lt;/a&gt;&lt;/p&gt; <br>
+              </code>
+          </div>
+
+          <div class="example">
+              <p>
+                  Jump to <a href="#String_tags">String tags</a>. The # symbol is used to indicate an anchor link within the same page.<br>
+                  It allows you to jump to a specific section of the page that has a corresponding id attribute.
+              </p>
+          </div>
+
+          <br><!-- ======================== -->
+
+          <h4>Anchor Link to a Bookmark on Another Page</h4>
+          <div class="code-block">
+              <code>
+                  &lt;a href="Home.html#String_tags"&gt;String tags&lt;/a&gt;
+              </code>
+          </div>
+
+          <div class="example">
+              <p>
+                  You can use a link to a bookmark on another page like this: <br>
+              <a href="Lessons/advanced_links.html#end_of_advanced_links">end of advanced links</a>. <br> 
+              This will take you to the section with the id "image_map_example" on the "advanced_links.html" page. <br><br>
+              <strong>But because of how I use JavaScript to fetch The different bubbles of code and example. <br>
+              this will not work.</strong> <br>
+              If you want to use this feature, you need to make sure that the page you are linking to has the corresponding id attribute set on the element you want to jump to not how I set this up.  <br>
+              My fix for this was The added JavaScript to the JavaScript code that catches the different bubbles and put them where they belong. For each page.  
+              </p>
+          </div> 
+    
+          <br><!-- ======================== -->
+
+          <h4>browser tab or window title bar</h4>
+          <div class="code-block">
+              <code>
+                  &lt;head&gt; <br>
+                  &nbsp;&nbsp;&lt;title&gt;text&lt;/title&gt; <br>
+                  &lt;/head&gt; <br>
+              </code>
+          </div>
+
+          <div class="example">
+              <p>
+                  The &lt;title&gt; tag is used to define the title of Stuff in HTML document.<br>
+                  Use the &lt;title&gt; tag inside the &lt;head&gt; section of your HTML document. <br>
+                  The title is displayed in the browser's title bar or tab, and it is also used by search engines to index the page.<br>
+              </p>
+          </div>
+
+          <br><!-- ======================== -->
+
+          <h4>mouse Effects</h4>
+          <div class="code-block">
+              <code>
+                  &lt;p title=<q>This is a tooltip that appears when you hover over the text</q>&gt; hover over this to see tooltip with the mouse&lt;/p&gt; <br>
+              </code>
+          </div>
+          
+          <div class="example">
+              <p title="This is a tooltip that appears when you hover over the text"> hover over this to see tooltip with the mouse</p>
+          </div>
+
+          <br><!-- ======================== -->
+
+          <h4>Favicon</h4>
+          <div class="code-block">
+              <code>
+                  &lt;link rel="icon" type="image/ico" href="Images/favicon.ico"&gt;
+              </code>
+          </div>
+
+          <div class="example">
+              <p>
+                  <strong>rel="icon"</strong> → Tells the browser this is the page icon (favicon).<br>
+                  <strong>type="image/ico"</strong> → Specifies the file type; like ico optional, browsers detect automatically.<br>
+                  <strong>href="Images/favicon.ico"</strong> → Path to the icon file; use .ico, .png, or .svg.<br>
+                  Place inside the &lt;head&gt; section so browsers load it when the page opens.
+              </p>
+          </div>  
+Yes. 
+      </div>
+    </template>
+
+  </body>
+</html>

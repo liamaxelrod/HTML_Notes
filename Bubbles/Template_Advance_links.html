@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bubbles Templates</title>
+  </head>
+  <body>
+    
+    <!-- ======================== TEMPLATE: advance links ======================== -->
+
+    <template id="Advance_links">
+      <div class="bubble">
+
+          <h3>advance links</h3>
+          <div class="code-block">
+              <code>
+                  &lt;a href="../Home.html"&gt; <br>
+                  &nbsp;&nbsp;&lt;img src="/Images/W3Schools_logo.png" alt="W3Schools_logo Images" style="width:42px;height:42px;" title="tooltip can be used here too."&gt; <br>
+                  &lt;/a&gt; <br><br>
+                  &lt;button onclick="document.location='/Lessons/name1.html'" title="tooltip can be used here too."&gt;HTML Tutorial&lt;/button&gt; <br><br>
+              </code>
+          </div>
+          
+          <div class="example">
+              <p>you con use title so if you hover over it with your mouse, you'll see tooltip Show up. </p>
+              <p>if you click on the image it will take you to W3Schools Website. The Button go to name1 We'll take you to the name1 page. </p>
+              <a href="https://www.w3schools.com/" target="_blank">
+              <img src="/Images/W3Schools_logo.png" alt="W3Schools_logo Images" style="width:42px;height:42px;" title="tooltip can be used here too.">
+              </a> <br>
+              <button onclick="document.location='/Lessons/name1.html'" title="tooltip can be used here too.">go to name1</button> <br><br>
+          </div>
+
+          <br><!-- ======================== -->
+
+          <h4>Image Map</h4>
+          <div class="code-block">
+              <code>
+                  &lt;img src="/Images/workplace.jpg" alt="Workplace" usemap="#workmap"&gt;<br><br>
+
+                  &lt;map name="workmap"&gt;<br>
+                  &nbsp;&nbsp;&lt;area shape="rect" coords="34,44,270,350" alt="Computer" href="javascript:void(0);" onclick="alert('You clicked on the Computer');"&gt;<br>
+                  &nbsp;&nbsp;&lt;area shape="rect" coords="290,172,333,250" alt="Phone" href="javascript:void(0);" onclick="alert('You clicked on the Phone');"&gt;<br>
+                  &nbsp;&nbsp;&lt;area shape="circle" coords="337,300,44" alt="Coffee" href="javascript:void(0);" onclick="alert('You clicked on the Coffee');"&gt;<br>
+                  &lt;/map&gt;
+              </code>
+          <code>
+              &lt;img src="/Images/workplace.jpg" alt="Workplace" usemap="#workmap"&gt;<br><br>
+
+              &lt;map name="workmap"&gt;<br>
+              &nbsp;&nbsp;&lt;area shape="rect" coords="34,44,270,350" alt="Computer" href="javascript:void(0);" onclick="alert('You clicked on the Computer');"&gt;<br>
+              &nbsp;&nbsp;&lt;area shape="rect" coords="290,172,333,250" alt="Phone" href="javascript:void(0);" onclick="alert('You clicked on the Phone');"&gt;<br>
+              &nbsp;&nbsp;&lt;area shape="circle" coords="337,300,44" alt="Coffee" href="javascript:void(0);" onclick="alert('You clicked on the Coffee');"&gt;<br>
+              &lt;/map&gt;
+          </code>
+          </div>
+        
+          <div class="example" id="image_map_example">
+              <p>
+                  usemap is an attribute of the &lt;img&gt; tag in HTML. <br>
+                  # is “Look for a &lt;map&gt; element in this page with a name="workmap".”
+              </p>
+              rect - defines a rectangular region
+  circle - defines a circular region
+  poly - defines a polygonal region
+  default - defines the entire region
+              <p>
+                  rect - defines a rectangular region <br>
+                  circle - defines a circular region <br>
+                  poly - defines a polygonal region <br>
+                  default - defines the entire region <br>
+                  <br>
+              </p>
+
+
+              <img src="/Images/workplace.jpg" alt="Workplace" usemap="#workmap">
+
+              <map name="workmap">
+                  <area shape="rect" coords="34,44,270,350" alt="Computer" href="javascript:void(0);" onclick="alert('You clicked on the Computer');">
+                  <area shape="rect" coords="290,172,333,250" alt="Phone" href="javascript:void(0);" onclick="alert('You clicked on the Phone');">
+                  <area shape="circle" coords="337,300,44" alt="Coffee" href="javascript:void(0);" onclick="alert('You clicked on the Coffee');">
+              </map>
+
+              <p>Image map is a way to make an image clickable in different areas. </p>
+              <p>In this example, the image is divided into three clickable areas: a rectangle for the computer, a rectangle for the phone, and a circle for the coffee. </p>
+              <br>
+              <p>
+                      shape="poly" - defines a polygonal region <br>
+                  coords - specifies the coordinates of the shape <br>
+                  
+                  &lt;area shape="poly" coords="140, 121, 181, 116, 204, 160, 204, 222, 191, 270, 140, 329, 85, 355, 58, 352, 37, 322, 40, 259, 103, 161, 128, 147" href="croissant.htm"&gt;
+                  
+              </p>
+          </div>  
+      </div>
+    </template>
+ 
+  </body>
+</html>
+
+<!--
+
+-->

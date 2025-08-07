@@ -1,0 +1,192 @@
+/* =======================
+   GENERAL RESET & BASE STYLES
+   ======================= */
+
+/* Removes default margin and padding from all elements */
+* {
+  margin: 0;                     /* Removes outer spacing */
+  padding: 0;                    /* Removes inner spacing */
+  box-sizing: border-box;       /* Includes padding and border in total width/height */
+}
+
+/* Base layout and font reset for clean, responsive design */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;              /* Prevents horizontal scrollbars */
+  box-sizing: border-box;          /* Ensures padding/borders are inside widths */
+  max-width: 100%;                 /* Prevents body from stretching beyond screen */
+  font-family: Arial, sans-serif;  /* Applies Arial font across the site */
+}
+
+/* =======================
+   NAVIGATION BAR STYLING
+   ======================= */
+
+/* Styles the nav bar's appearance and layout */
+nav {
+  background-color: #1497fc;    /* Blue background for nav bar */
+  color: white;                 /* White text inside nav bar */
+  padding: 0;                   /* No padding around nav */
+  display: flex;                /* Uses flexbox to arrange items horizontally */
+  justify-content: flex-start; /* Aligns nav items to the left */
+  align-items: center;          /* Vertically centers nav items */
+  height: 40px;                 /* Sets nav bar height */
+}
+
+/* Styles the list of links in the nav bar */
+nav ul {
+  list-style: none;             /* Removes bullet points from list */
+  display: flex;                /* Displays list items in a row */
+  gap: 0;                       /* No space between list items */
+}
+
+/* Positions dropdown menus relative to list item */
+nav li {
+  position: relative;           /* Needed for absolutely positioned dropdown */
+}
+
+/* Styles the nav links */
+nav a {
+  color: white;                 /* White text color */
+  text-decoration: none;        /* Removes underline from links */
+  padding: 10px 20px;           /* Adds space inside the link box */
+  display: block;               /* Makes entire area clickable */
+  height: 100%;                 /* Full height of nav bar */
+  transition: background-color 0.3s; /* Smooth color change on hover */
+}
+
+/* Adds hover effect to nav links */
+nav a:hover {
+  background-color: #f4073a;    /* Changes background to red on hover */
+}
+
+/* =======================
+   DROPDOWN MENU
+   ======================= */
+
+/* Initially hides dropdown content */
+.dropdown-content {
+  display: none;                /* Hidden by default */
+  position: absolute;           /* Positioned relative to parent */
+  top: 40px;                    /* Appears just below the nav bar */
+  left: 0;                      /* Aligned to the left of the parent */
+  background-color: #1497fc;    /* Blue background for dropdown */
+  min-width: 114px;             /* Minimum width of the dropdown menu */
+  z-index: 1;                   /* Makes sure it appears above other content */
+}
+
+/* Styles each link inside the dropdown */
+.dropdown-content a {
+  padding: 12px 20px;           /* Spacing inside dropdown links */
+}
+
+/* Shows the dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;               /* Makes the dropdown visible */
+}
+
+/* =======================
+   PAGE SECTIONS
+   ======================= */
+
+/* Styles general content sections */
+.section {
+  padding: 10px 20px;           /* Adds space inside section blocks */
+}
+
+/* =======================
+   "BUBBLE" STYLES FOR CODE EXAMPLES
+   ======================= */
+
+/* Styles the outer container for code example and result */
+.bubble {
+  background-color: #f2f2f2;    /* Light gray background for contrast */
+  border-radius: 15px;          /* Rounded corners for a soft look */
+  padding: 20px;                /* Space inside the bubble */
+  margin: 20px;                 /* Space around the bubble */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+}
+
+/* Align lists under explanation paragraphs within bubbles */
+.bubble ol,
+.bubble ul {
+  margin-left: 1.5em;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+/* Styles the code display area */
+.code-block {
+  background-color: #1e1e1e;    /* Dark background like a code editor */
+  color: #dcdcdc;               /* Light gray text for contrast */
+  padding: 10px;                /* Space inside the code block */
+  border-radius: 8px;           /* Slightly rounded edges */
+  font-family: monospace;       /* Fixed-width font for code */
+  overflow-x: auto;             /* Enables scrolling if code is too wide */
+  margin-bottom: 10px;          /* Adds space below code block */
+}
+
+/* Styles the live HTML example preview box */
+.example {
+  background-color: white;      /* White background to show example clearly */
+  padding: 10px;                /* Space inside the preview box */
+  border: 1px solid #ccc;       /* Light gray border around the preview */
+  border-radius: 8px;           /* Slightly rounded edges */
+}
+
+/* Adds spacing between the example title and the code block */
+.bubble h3 {
+  margin-bottom: 10px;          /* Space under the heading */
+}
+
+/* =======================
+   UNIVERSAL COLOR SYSTEM
+   For code, explanation, and dots
+   ======================= */
+
+/* Code text colors for syntax highlighting */
+.code-color1 { color: #d94a7f; }  /* Pinkish - e.g. text inputs */
+.code-color2 { color: #4aa4d9; }  /* Blue - e.g. password */
+.code-color3 { color: #6cba47; }  /* Green - e.g. email */
+.code-color4 { color: #e28c4a; }  /* Orange - e.g. buttons */
+.code-color5 { color: #a14ad9; }  /* Purple - e.g. radio buttons */
+.code-color6 { color: #4ad9b0; }  /* Teal - e.g. checkboxes */
+.code-color7 { color: #d94a4a; }  /* Red - e.g. date, color inputs */
+.code-color8 { color: #9a9a9a; }  /* Gray - e.g. readonly, disabled */
+.code-color9 { color: #d97a2a; }  /* Brownish - optional */
+.code-color10 { color: #2a72d9; } /* Strong blue - optional */
+
+/* Explanation text colors matching code colors */
+.ex-color1 { color: #d94a7f; }
+.ex-color2 { color: #4aa4d9; }
+.ex-color3 { color: #6cba47; }
+.ex-color4 { color: #e28c4a; }
+.ex-color5 { color: #a14ad9; }
+.ex-color6 { color: #4ad9b0; }
+.ex-color7 { color: #d94a4a; }
+.ex-color8 { color: #9a9a9a; }
+.ex-color9 { color: #d97a2a; }
+.ex-color10 { color: #2a72d9; }
+
+/* Base dot style */
+.color-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* Dot colors (allow either .dotX or .color-dot.dotX) */
+.dot1, .color-dot.dot1 { background-color: #d94a7f; }
+.dot2, .color-dot.dot2 { background-color: #4aa4d9; }
+.dot3, .color-dot.dot3 { background-color: #6cba47; }
+.dot4, .color-dot.dot4 { background-color: #e28c4a; }
+.dot5, .color-dot.dot5 { background-color: #a14ad9; }
+.dot6, .color-dot.dot6 { background-color: #4ad9b0; }
+.dot7, .color-dot.dot7 { background-color: #d94a4a; }
+.dot8, .color-dot.dot8 { background-color: #9a9a9a; }
+.dot9, .color-dot.dot9 { background-color: #d97a2a; }
+.dot10, .color-dot.dot10 { background-color: #2a72d9; }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bubbles Templates</title>
+  </head>
+  <body>
+    
+    <!-- ======================== TEMPLATE: Images ======================== -->
+ 
+    <template id="Images">
+        <div class="bubble">
+            <h3>Images</h3>
+            <div class="code-block">
+                <code>
+                    &lt;img src="Images/W3Schools_logo.png" alt="W3Schools logo" style="width: 40px; height: 40px;"&gt;
+                </code>
+            </div>
+            <div class="example">
+                <img src="/Images/W3Schools_logo.png" alt="W3Schools logo" style="width: 40px; height: 40px;">
+            </div>
+            <br>
+            <p>
+                src: Finds the image in folder or from the internet <br>
+                alt: Gives an alternate of text instead of the image if it can't be found. <br>
+                style: Controls How the image is presented like size?
+            </p>
+
+            <br><!-- ======================== -->
+
+            <h4>picture vs img</h4>
+            <div class="code-block">
+                <code>
+                    &lt;picture&gt;<br>
+                    &nbsp;&nbsp;&lt;source media="(min-width: 650px)" srcset="https://images.pexels.com/photos/6808985/pexels-photo-6808985.jpeg"&gt;<br>
+                    &nbsp;&nbsp;&lt;source media="(min-width: 465px)" srcset="https://images.pexels.com/photos/8693381/pexels-photo-8693381.jpeg"&gt;<br>
+                    &nbsp;&nbsp;&lt;img src="https://images.pexels.com/photos/32388400/pexels-photo-32388400.jpeg" alt="Example responsive image"&gt;<br>
+                &lt;/picture&gt;
+                </code>
+            </div>
+            
+            <div class="example">
+                <picture>
+                    <!-- Large screens (≥1100px) -->
+                    <source media="(min-width: 1100px)" 
+                            srcset="https://images.pexels.com/photos/8693381/pexels-photo-8693381.jpeg">
+                    
+                    <!-- Medium screens (700px – 699px) -->
+                    <source media="(min-width: 700px)" 
+                            srcset="https://images.pexels.com/photos/6808985/pexels-photo-6808985.jpeg">
+                    
+                    <!-- Small screens (<700px) → fallback -->
+                    <img src="https://images.pexels.com/photos/32388400/pexels-photo-32388400.jpeg" 
+                        alt="Example responsive image" 
+                        style="max-width:100%; height:auto;">
+                </picture>
+                <p>
+                    &lt;img&gt; <br>
+                    src → The image file (local or URL). <br>
+                    alt → Alternate text (important for accessibility & SEO). <br>
+                    width & height → Optional size controls. <br>
+                    &lt;picture&gt; Best when: <br>
+                    The &lt;picture&gt; element gives you more control, allowing you to provide multiple image sources for different screen sizes, pixel densities, or formats.
+                    It contains one or more &lt;source&gt; tags and a fallback &lt;img&gt;. <br>
+                    &lt;source&gt; Can also figure out if the image can't be rendered and will try the next source like .png / .jpg / .gif <br>
+                    style="auto; height:auto;" → Ensures the image scales responsively, maintaining its aspect ratio. <br>
+                </p>
+            </div>
+
+        </div>
+    </template>
+
+  </body>
+</html>

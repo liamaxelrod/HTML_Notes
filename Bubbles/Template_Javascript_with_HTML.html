@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bubbles Templates</title>
+  </head>
+  <body>
+    
+    <!-- ======================== TEMPLATE: javascript_with_HTML   ======================== -->
+
+    <template id="Javascript_with_HTML">
+  <div class="bubble">
+    <h3>JavaScript with HTML</h3>
+
+    <div class="code-block">
+      <code>
+        &lt;button onclick="alert('Hello, World!');"&gt;Click Me&lt;/button&gt;
+      </code>
+    </div>
+
+    <div class="example">
+      <button onclick="alert('Hello, World!');">Click Me</button>
+      <br>
+      <p>
+        The <code>button</code> tag creates a clickable button.<br>
+        The <code>onclick</code> attribute allows you to specify JavaScript code that runs when the button is clicked.<br>
+        In this example, an alert pops up when the button is clicked.
+      </p>
+    </div>
+
+    <h4>The HTML &lt;script&gt; Tag</h4>
+    <p>
+      The <code>&lt;script&gt;</code> tag is used to include JavaScript in your webpage.<br>
+      JavaScript code can be added in two ways:
+    </p>
+    <br>
+    
+
+    <h4>The HTML &lt;noscript&gt; Tag</h4>
+    <p>
+      The <code>&lt;noscript&gt;</code> tag provides alternate content for users whose browsers do not support JavaScript or have it disabled.<br>
+      This ensures your webpage communicates important information or fallback content when JavaScript is not available.
+    </p>
+
+    <h4>Summary</h4>
+    <ul>
+      <li>JavaScript can be added inline inside HTML or linked externally via a separate file.</li>
+      <li>Using external files helps keep your code organized and reusable.</li>
+      <li>The <code>&lt;noscript&gt;</code> tag provides fallback content if JavaScript is disabled or unsupported.</li>
+      <li>Always include meaningful fallback content to improve user experience.</li>
+    </ul>
+    <br>
+
+    <h5>Example of &lt;noscript&gt; usage:</h5>
+    <div class="code-block">
+      <code>
+        &lt;noscript&gt;<br>
+        &nbsp;&nbsp;JavaScript is required to view this page properly. Please enable JavaScript in your browser.<br>
+        &lt;/noscript&gt;
+      </code>
+    </div>
+
+    <p>The difference of inline and external Javascript is simply where the code exists.</p>
+
+    <h5>Example of Inline JavaScript:</h5>
+    <div class="code-block">
+      <code>
+        &lt;script&gt;<br>
+        &nbsp;&nbsp;alert('Hello from inline JavaScript!');<br>
+        &lt;/script&gt;
+      </code>
+    </div>
+
+    <h5>Example of External JavaScript:</h5>
+    <div class="code-block">
+      <code>
+        &lt;!-- In script.js file --&gt;<br>
+        alert('Hello from external JavaScript!');<br><br>
+        &lt;!-- In your HTML file --&gt;<br>
+        &lt;script src="script.js"&gt;&lt;/script&gt;
+      </code>
+    </div>
+  </div>
+</template>
+
+  </body>
+</html>
+
+<!--
+
+-->

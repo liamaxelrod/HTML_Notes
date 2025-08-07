@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bubbles Templates</title>
+</head>
+<body>
+
+<!-- ======================== TEMPLATE: ? ======================== -->
+    <template id="Iframe">
+        <div class="bubble">
+
+            <style>
+            /* 
+                NOTE: This CSS is necessary for responsive iframe layout.
+                Without this, the iframes will stack vertically and not wrap properly.
+            */
+            .iframe-row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+            }
+
+            .iframe-row > div {
+                flex: 1 1 300px;
+                min-width: 280px;
+                max-width: 400px;
+            }
+
+            .iframe-row iframe {
+                width: 100%;
+                height: 200px;
+                border: 1px solid #ccc;
+            }
+            </style>
+
+            <h3>The <code>&lt;iframe&gt;</code> Tag</h3>
+            <p>
+            The <code>&lt;iframe&gt;</code> tag embeds another HTML page into the current one — like placing a mini browser window inside your page.
+            </p>
+
+            <!-- === CODE BLOCK === -->
+            <div class="code-block">
+            <code>
+                &lt;!-- Container for responsive layout --&gt;<br>
+                &lt;div class="iframe-row"&gt;<br>
+                &nbsp;&nbsp;&lt;div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe src="/Lessons/Advanced_links.html" title="Default iframe"&gt;&lt;/iframe&gt;<br>
+                &nbsp;&nbsp;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&lt;div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe src="/Lessons/Advanced_links.html" title="Custom size" style="height:300px;"&gt;&lt;/iframe&gt;<br>
+                &nbsp;&nbsp;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&lt;div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe src="/Lessons/Advanced_links.html" title="No border" style="border:none;"&gt;&lt;/iframe&gt;<br>
+                &nbsp;&nbsp;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&lt;div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe name="lessonFrame" src="/Lessons/Advanced_links.html" title="Target iframe"&gt;&lt;/iframe&gt;<br>
+                &nbsp;&nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;<br><br>
+
+                &lt;!-- CSS needed for responsive flex layout: --&gt;<br>
+                &lt;style&gt;<br>
+                .iframe-row {<br>
+                &nbsp;&nbsp;display: flex;<br>
+                &nbsp;&nbsp;flex-wrap: wrap;<br>
+                &nbsp;&nbsp;gap: 20px;<br>
+                &nbsp;&nbsp;justify-content: center;<br>
+                }<br>
+                .iframe-row &gt; div {<br>
+                &nbsp;&nbsp;flex: 1 1 300px;<br>
+                &nbsp;&nbsp;min-width: 280px;<br>
+                &nbsp;&nbsp;max-width: 400px;<br>
+                }<br>
+                .iframe-row iframe {<br>
+                &nbsp;&nbsp;width: 100%;<br>
+                &nbsp;&nbsp;height: 200px;<br>
+                &nbsp;&nbsp;border: 1px solid #ccc;<br>
+                }<br>
+                &lt;/style&gt;<br><br>
+
+                &lt;!-- Global CSS affecting this layout: --&gt;<br>
+                &lt;style&gt;<br>
+                html, body {<br>
+                &nbsp;&nbsp;margin: 0;<br>
+                &nbsp;&nbsp;padding: 0;<br>
+                &nbsp;&nbsp;overflow-x: hidden; /* Prevents horizontal scrollbars */<br>
+                &nbsp;&nbsp;box-sizing: border-box; /* Padding and borders inside width */<br>
+                &nbsp;&nbsp;max-width: 100%; /* Prevents body from stretching beyond viewport */<br>
+                &nbsp;&nbsp;font-family: Arial, sans-serif; /* Font for page text */<br>
+                }<br>
+                &lt;/style&gt;
+            </code>
+            </div>
+
+            <!-- === RESPONSIVE IFRAME EXAMPLES WITH INTERACTION === -->
+            <div class="example">
+            <div class="iframe-row">
+
+                <!-- Default iframe -->
+                <div>
+                <p><strong>Default iframe</strong></p>
+                <iframe src="/About.html" title="Default iframe"></iframe>
+                </div>
+
+                <!-- Custom size iframe -->
+                <div>
+                <p><strong>Custom size</strong></p>
+                <iframe src="/About.html" title="Custom size" style="height: 300px;"></iframe>
+                </div>
+
+                <!-- No border iframe -->
+                <div>
+                <p><strong>No border</strong></p>
+                <iframe src="/About.html" title="No border" style="border: none;"></iframe>
+                </div>
+
+                <!-- Iframe as link target with example link -->
+                <div>
+                <p><strong>Iframe as Link Target</strong></p>
+                <div class="link-target-container">
+                    <a href="http://127.0.0.1:5500/About.html" target="myframe">Open Advanced_links.html in iframe</a>
+                    <iframe name="myframe" title="Link target iframe" width="300" height="200" style="border: 1px solid #ccc;"></iframe>
+                </div>
+                </div>
+
+            </div>
+            </div>
+
+            <!-- Notes -->
+            <h4>Key Points:</h4>
+            <ul>
+            <li><code>&lt;iframe&gt;</code> embeds another HTML document into the current page</li>
+            <li><code>src</code> specifies the page to load</li>
+            <li><code>title</code> improves accessibility (required for screen readers)</li>
+            <li><code>width</code> and <code>height</code> can be set with HTML or CSS</li>
+            <li>Use <code>border: none</code> in style to remove border</li>
+            <li>To load a link inside an iframe, give the iframe a <code>name</code> and use <code>target</code> on the link</li>
+            <li>Use <code>flex-wrap</code> and <code>min-width</code> to make iframes responsive across screen sizes</li>
+            <li><strong>Global CSS rules like <code>overflow-x: hidden</code> and <code>box-sizing: border-box</code> help prevent horizontal scrollbars and layout overflow</strong></li>
+            <li><strong>Note:</strong> Links inside the iframes could work, but in this web page not all of them Have been configured to do so.</li>
+            </ul>
+
+        </div>
+    </template>
+</body>
+</html>
+
+<!-- 
+
+ -->

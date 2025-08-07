@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bubbles Templates</title>
+</head>
+<body>
+
+<!-- ======================== TEMPLATE: div ======================== -->
+    <template id="Class">
+        <div class="bubble">
+
+            <h3>The <code>class</code> Attribute</h3>
+            <p>
+            The <code>class</code> attribute lets you group elements for CSS styling and JavaScript interaction.
+            Below is a single code example that illustrates many features of the <code>class</code> attribute.
+            </p>
+
+            <!-- === CODE BLOCK === -->
+            <div class="code-block">
+            <code>
+                &lt;style&gt;<br>
+                &nbsp;.city { background-color: #f8d7da; padding: 5px; }<br>
+                &nbsp;.main { font-weight: bold; font-size: 1.2em; }<br>
+                &nbsp;.note { color: blue; font-style: italic; }<br>
+                &nbsp;.highlight { background-color: #d4edda; padding: 5px; }<br>
+                &lt;/style&gt;<br><br>
+
+                &lt;div class="city"&gt;London&lt;/div&gt;<br>
+                &lt;div class="city main"&gt;Paris&lt;/div&gt;<br>
+                &lt;p class="note"&gt;This is a note&lt;/p&gt;<br>
+                &lt;h2 class="highlight"&gt;Shared highlight&lt;/h2&gt;<br>
+                &lt;p class="highlight note"&gt;Styled with two classes&lt;/p&gt;
+            </code>
+            </div>
+
+            <!-- === EXAMPLE BLOCK === -->
+            <div class="example">
+            <style>
+                .city { background-color: #f8d7da; padding: 5px; }
+                .main { font-weight: bold; font-size: 1.2em; }
+                .note { color: blue; font-style: italic; }
+                .highlight { background-color: #d4edda; padding: 5px; }
+            </style>
+
+            <div class="city">London</div>
+            <div class="city main">Paris</div>
+            <p class="note">This is a note</p>
+            <h2 class="highlight">Shared highlight</h2>
+            <p class="highlight note">Styled with two classes</p>
+            </div>
+
+            <!-- === EXPLANATIONS === -->
+            <p><strong>Explanation:</strong></p>
+            <ol>
+            <li><code>class="city"</code> styles all city elements with a pink background.</li>
+            <li><code>class="city main"</code> applies both city background and bold text.</li>
+            <li><code>class="note"</code> makes text italic and blue — works on any tag.</li>
+            <li><code>class="highlight"</code> is shared between <code>&lt;h2&gt;</code> and <code>&lt;p&gt;</code>.</li>
+            <li>Elements with multiple classes (like <code>highlight note</code>) combine all styles.</li>
+            </ol>
+
+            <p>
+            ✅ Class names are case-sensitive.<br>
+            ✅ Elements can have multiple classes.<br>
+            ✅ Classes are reusable across elements.<br>
+            ✅ You can access them in JavaScript with <code>getElementsByClassName()</code>.
+            </p>
+
+            <h4>Class vs ID</h4>
+            <ul>
+                <li><strong>ID</strong> is unique — one element per ID. Use it when you need to target or style a single, specific element In one HTML document.</li>
+                <li><strong>Class</strong> can be reused — many elements can share the same class. Use it for groups of elements that share styling or behavior across HTML documents. </li>
+            </ul>
+        </div>
+    </template>
+
+</body>
+</html>
+
+<!-- 
+
+ -->

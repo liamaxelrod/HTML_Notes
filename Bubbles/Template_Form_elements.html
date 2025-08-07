@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bubbles Templates</title>
+</head>
+<body>
+
+<!-- ======================== TEMPLATE: Form Elements ======================== -->
+    
+
+    <template id="Form_Elements">
+
+        <div class="bubble">
+            <h3>HTML Form Elements</h3>
+
+            <div class="code-block">
+        <code>
+            &lt;<span class="code-color4">fieldset</span>&gt; &lt;!-- Groups related controls --&gt;<br>
+            &nbsp;&nbsp;&lt;<span class="code-color4">legend</span>&gt;Personal Info&lt;/<span class="code-color4">legend</span>&gt; &lt;!-- Label for the group --&gt;<br>
+            &nbsp;&nbsp;&lt;<span class="code-color1">label</span> for="fname"&gt;First Name:&lt;/<span class="code-color1">label</span>&gt;<br>
+            &nbsp;&nbsp;&lt;<span class="code-color1">input</span> type="text" id="fname" name="fname" placeholder="John"&gt;<br><br>
+
+            &nbsp;&nbsp;&lt;<span class="code-color1">label</span> for="lname"&gt;Last Name:&lt;/<span class="code-color1">label</span>&gt;<br>
+            &nbsp;&nbsp;&lt;<span class="code-color1">input</span> type="text" id="lname" name="lname" placeholder="Doe"&gt;<br>
+            &lt;/<span class="code-color4">fieldset</span>&gt;<br><br>
+
+            &lt;<span class="code-color1">label</span> for="bio"&gt;Biography:&lt;/<span class="code-color1">label</span>&gt;<br>
+            &lt;<span class="code-color3">textarea</span> id="bio" name="bio" rows="4" cols="50" placeholder="Write something..."&gt;&lt;/<span class="code-color3">textarea</span>&gt;<br><br>
+
+            &lt;<span class="code-color5">label</span>&gt;Gender:&lt;/<span class="code-color5">label</span>&gt;<br>
+            &nbsp;&nbsp;&lt;<span class="code-color5">input</span> type="radio" id="male" name="gender" value="male"&gt;&lt;<span class="code-color5">label</span> for="male"&gt;Male&lt;/<span class="code-color5">label</span>&gt;<br>
+            &nbsp;&nbsp;&lt;<span class="code-color5">input</span> type="radio" id="female" name="gender" value="female"&gt;&lt;<span class="code-color5">label</span> for="female"&gt;Female&lt;/<span class="code-color5">label</span>&gt;<br><br>
+
+            &lt;<span class="code-color6">label</span> for="cars"&gt;Choose a car:&lt;/<span class="code-color6">label</span>&gt;<br>
+            &lt;<span class="code-color6">select</span> id="cars" name="cars"&gt;<br>
+            &nbsp;&nbsp;&lt;<span class="code-color6">option</span> value="volvo"&gt;Volvo&lt;/<span class="code-color6">option</span>&gt;<br>
+            &nbsp;&nbsp;&lt;<span class="code-color6">option</span> value="saab"&gt;Saab&lt;/<span class="code-color6">option</span>&gt;<br>
+            &nbsp;&nbsp;&lt;<span class="code-color6">option</span> value="fiat"&gt;Fiat&lt;/<span class="code-color6">option</span>&gt;<br>
+            &nbsp;&nbsp;&lt;<span class="code-color6">option</span> value="audi"&gt;Audi&lt;/<span class="code-color6">option</span>&gt;<br>
+            &lt;/<span class="code-color6">select</span>&gt;<br><br>
+
+            &lt;<span class="code-color4">button</span> type="submit"&gt;Submit&lt;/<span class="code-color4">button</span>&gt;<br>
+            &lt;<span class="code-color4">button</span> type="reset"&gt;Reset&lt;/<span class="code-color4">button</span>&gt;<br>
+            &lt;<span class="code-color4">button</span> type="button"&gt;Click Me&lt;/<span class="code-color4">button</span>&gt;
+        </code>
+        </div>
+
+            <div class="example">
+            <form onsubmit="return false;" action="#" method="post">
+                <fieldset>
+                <legend>Personal Info<span class="color-dot dot4"></span></legend>
+
+                <label for="fname">First Name:<span class="color-dot dot1"></span></label><br>
+                <input type="text" id="fname" name="fname" placeholder="John"><br><br>
+
+                <label for="lname">Last Name:<span class="color-dot dot1"></span></label><br>
+                <input type="text" id="lname" name="lname" placeholder="Doe"><br>
+                </fieldset><br>
+
+                <label for="bio">Biography:<span class="color-dot dot3"></span></label><br>
+                <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Write something..."></textarea><br><br>
+
+                <label>Gender:<span class="color-dot dot5"></span></label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br><br>
+
+                <label for="cars">Choose a car:<span class="color-dot dot6"></span></label><br>
+                <select id="cars" name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+                </select><br><br>
+
+                <button type="submit">Submit<span class="color-dot dot4"></span></button>
+                <button type="reset">Reset<span class="color-dot dot4"></span></button>
+                <button type="button">Click Me<span class="color-dot dot4"></span></button>
+            </form>
+            </div>
+
+                <p><strong>Explanation:</strong><br>
+
+            <span class="ex-color4">&lt;fieldset&gt;</span>: Groups related form elements together inside a visible box with a border.<br>
+            <span class="ex-color4">&lt;legend&gt;</span>: Gives that group a title. This helps both visually and for screen readers.<br><br>
+
+            <span class="ex-color1">&lt;label&gt;</span>: Connects a text label to a specific input field.<br>
+            &nbsp;&nbsp;- Clicking the label will focus (or toggle) the associated input.<br>
+            &nbsp;&nbsp;- Use <code>for="id"</code> to link to the input, or wrap the input inside the label.<br><br>
+
+            <span class="ex-color3">&lt;textarea&gt;</span>: A box for multi-line text (like a comment or bio).<br>
+            &nbsp;&nbsp;- Use <code>rows</code> and <code>cols</code> to control the size.<br>
+            &nbsp;&nbsp;- Supports attributes like <code>placeholder</code> and <code>maxlength</code>.<br><br>
+
+            <span class="ex-color5">Radio buttons</span>: Let users pick only one option from a group.<br>
+            &nbsp;&nbsp;- All buttons with the same <code>name</code> are grouped automatically.<br>
+            &nbsp;&nbsp;- Only one can be selected at a time.<br><br>
+
+            <span class="ex-color6">Dropdowns</span>: Use <code>&lt;select&gt;</code> for picking from a list of options.<br>
+            &nbsp;&nbsp;- Each <code>&lt;option&gt;</code> is a choice.<br>
+            &nbsp;&nbsp;- Add <code>multiple</code> to the <code>&lt;select&gt;</code> tag to allow picking more than one.<br><br>
+
+            <span class="ex-color4">Buttons</span>: Clickable elements that perform actions.<br>
+            &nbsp;&nbsp;- <code>type="submit"</code> sends the form.<br>
+            &nbsp;&nbsp;- <code>type="reset"</code> clears the form to its initial state.<br>
+            &nbsp;&nbsp;- <code>type="button"</code> is a blank button — you add custom behavior with JavaScript.<br><br>
+
+            <strong>Other Notes:</strong><br>
+            - Use <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> to visually group related fields — it helps with accessibility too.<br>
+            - <code>&lt;label&gt;</code> is important for users with screen readers and also improves click/tap targets.<br>
+            - <code>&lt;select&gt;</code> is a compact way to show a list of fixed options.<br>
+            - Any of these elements can be made <code>disabled</code> or <code>readonly</code> to control what users can interact with.<br>
+            </p>
+        </div>
+    </template>
+
+</body>
+</html>
+
+<!-- 
+
+-->

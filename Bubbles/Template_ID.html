@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bubbles Templates</title>
+</head>
+<body>
+
+<!-- ======================== TEMPLATE: div ======================== -->
+    <template id="ID">
+        <div class="bubble">
+
+            <h3>The <code>id</code> Attribute</h3>
+            <p>
+            The <code>id</code> attribute gives a unique identifier to an HTML element. IDs are used for styling with CSS, jumping to sections (bookmarks), and targeting specific elements in JavaScript.
+            </p>
+
+            <!-- === CODE BLOCK === -->
+            <div class="code-block">
+            <code>
+                &lt;style&gt;<br>
+                &nbsp;#myHeader { color: green; text-align: center; }<br>
+                &nbsp;#chapter4 { background-color: #f8d7da; padding: 5px; }<br>
+                &lt;/style&gt;<br><br>
+
+                &lt;h1 id="myHeader"&gt;Welcome&lt;/h1&gt;<br>
+                &lt;p&gt;&lt;a href="#chapter4"&gt;Jump to Chapter 4&lt;/a&gt;&lt;/p&gt;<br><br>
+
+                &lt;p&gt;...Long content here...&lt;/p&gt;<br><br>
+
+                &lt;h2 id="chapter4"&gt;Chapter 4&lt;/h2&gt;<br>
+                &lt;p&gt;This is the fourth chapter.&lt;/p&gt;
+            </code>
+            </div>
+
+            <!-- === EXAMPLE BLOCK === -->
+            <div class="example">
+            <style>
+                #chapter4 { background-color: #f8d7da; padding: 5px; }
+            </style>
+
+            <p><a href="#chapter4">Jump to Chapter 4</a></p>
+
+            <p>...Long content here...</p>
+            <br>
+            <h2 id="chapter4">Chapter 4</h2>
+            <p>This is the fourth chapter.</p>
+            </div>
+
+            <!-- === EXPLANATION BLOCK === -->
+            <p><strong>Explanation:</strong></p>
+            <ol>
+            <li><code>id="myHeader"</code> is styled with <code>#myHeader</code> in CSS.</li>
+            <li><code>id="chapter4"</code> acts as a bookmark anchor.</li>
+            <li>The link <code>&lt;a href="#chapter4"&gt;</code> scrolls to the element with that ID.</li>
+            <li>IDs can also be accessed in JavaScript using <code>getElementById()</code>.</li>
+            </ol>
+
+            <!-- === COMPARISON SECTION === -->
+            <p><strong>JavaScript</strong> <code>getElementById()</code> for IDs, <code>getElementsByClassName()</code> for classes.</p>
+            <h4>Class vs ID</h4>
+            <ul>
+                <li><strong>ID</strong> is unique — one element per ID. Use it when you need to target or style a single, specific element In one HTML document.</li>
+                <li><strong>Class</strong> can be reused — many elements can share the same class. Use it for groups of elements that share styling or behavior across HTML documents. </li>
+            </ul>
+
+        </div>
+    </template>
+
+</body>
+</html>
+
+<!-- 
+
+ -->

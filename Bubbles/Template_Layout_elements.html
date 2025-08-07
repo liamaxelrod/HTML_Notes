@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bubbles Templates</title>
+</head>
+<body>
+
+<!-- ======================== TEMPLATE: HTML Layout Elements and Techniques
+ ======================== -->
+
+  <template id="Layout_Elements">
+    <div class="bubble">
+
+      <h3>HTML Layout Elements & CSS Techniques</h3>
+
+      <!-- Button controls to change the code and example -->
+      <div style="margin-bottom: 10px;">
+        <button onclick="showLayoutExample('semantic')">Semantic Layout</button>
+        <button onclick="showLayoutExample('float')">CSS Float</button>
+        <button onclick="showLayoutExample('flexbox')">CSS Flexbox</button>
+        <button onclick="showLayoutExample('grid')">CSS Grid</button>
+      </div>
+
+      <!-- CODE BLOCK (Updated Dynamically) -->
+      <div class="code-block" id="layout-code">
+        <!-- Default code shown will be semantic layout -->
+        <code>
+          &lt;header&gt;Site Header&lt;/header&gt;<br>
+          &lt;nav&gt;Main Navigation&lt;/nav&gt;<br>
+          &lt;section&gt;<br>
+          &nbsp;&nbsp;&lt;article&gt;Main Content&lt;/article&gt;<br>
+          &nbsp;&nbsp;&lt;aside&gt;Sidebar&lt;/aside&gt;<br>
+          &lt;/section&gt;<br>
+          &lt;footer&gt;Site Footer&lt;/footer&gt;
+        </code>
+      </div>
+
+      <!-- EXAMPLE (Updated Dynamically) -->
+      <div class="example" id="layout-example">
+        <header style="background:#ddd; padding:5px;">Site Header</header>
+        <nav style="background:#ccc; padding:5px;">Main Navigation</nav>
+        <section style="display:flex;">
+          <article style="flex:3; background:#eee; padding:5px;">Main Content</article>
+          <aside style="flex:1; background:#f9f9f9; padding:5px;">Sidebar</aside>
+        </section>
+        <footer style="background:#ddd; padding:5px;">Site Footer</footer>
+      </div>
+      <div class="example">
+      <p>
+      This example demonstrates different techniques to build page layouts in HTML and CSS.
+      Each layout shows how to structure content (like headers, navigation, main content, and sidebars)
+      using a specific approach. Here's when to use each:
+      </p>
+      <ul>
+        <li><strong>Semantic Layout</strong> – Uses HTML5 elements like <code>&lt;header&gt;</code> and <code>&lt;section&gt;</code> for readability and structure. Best for accessibility and clean markup.</li>
+        <li><strong>CSS Float</strong> – An older technique that floats elements left or right. Mostly replaced by Flexbox and Grid but still seen in legacy code.</li>
+        <li><strong>Flexbox</strong> – Ideal for one-dimensional layouts (horizontal or vertical). Great for toolbars, content/sidebar, or navigation menus.</li>
+        <li><strong>CSS Grid</strong> – Best for two-dimensional layouts. Allows full control over rows and columns, perfect for full-page or complex layouts.</li>
+      </ul>
+      <p>Select a layout below to see its code and a working example.</p>
+      </div>
+
+      <script>
+        function showLayoutExample(type) {
+          const codeEl = document.getElementById('layout-code');
+          const exampleEl = document.getElementById('layout-example');
+
+          if (type === 'semantic') {
+            codeEl.innerHTML = `<code>
+  &lt;header&gt;Site Header&lt;/header&gt; <span style="color:gray;">&lt;!-- Top of the page --&gt;</span><br>
+  &lt;nav&gt;Main Navigation&lt;/nav&gt; <span style="color:gray;">&lt;!-- Navigation links --&gt;</span><br>
+  &lt;section&gt;<br>
+  &nbsp;&nbsp;&lt;article&gt;Main Content&lt;/article&gt;<br>
+  &nbsp;&nbsp;&lt;aside&gt;Sidebar&lt;/aside&gt;<br>
+  &lt;/section&gt;<br>
+  &lt;footer&gt;Site Footer&lt;/footer&gt;
+  </code>`;
+            exampleEl.innerHTML = `
+  <header style="background:#ddd; padding:5px;">Site Header</header>
+  <nav style="background:#ccc; padding:5px;">Main Navigation</nav>
+  <section style="display:flex;">
+    <article style="flex:3; background:#eee; padding:5px;">Main Content</article>
+    <aside style="flex:1; background:#f9f9f9; padding:5px;">Sidebar</aside>
+  </section>
+  <footer style="background:#ddd; padding:5px;">Site Footer</footer>`;
+          }
+
+          if (type === 'float') {
+            codeEl.innerHTML = `<code>
+  &lt;div style="float:left; width:70%;"&gt;Main Content&lt;/div&gt;<br>
+  &lt;div style="float:right; width:30%;"&gt;Sidebar&lt;/div&gt;<br>
+  &lt;div style="clear:both;"&gt;&lt;/div&gt; <span style="color:gray;">&lt;!-- Clears the float --&gt;</span>
+  </code>`;
+            exampleEl.innerHTML = `
+  <div style="float:left; width:70%; background:#eee; padding:5px;">Main Content</div>
+  <div style="float:right; width:30%; background:#f9f9f9; padding:5px;">Sidebar</div>
+  <div style="clear:both;"></div>`;
+          }
+
+          if (type === 'flexbox') {
+            codeEl.innerHTML = `<code>
+  &lt;div style="display:flex;"&gt;<br>
+  &nbsp;&nbsp;&lt;div style="flex:3;"&gt;Main Content&lt;/div&gt;<br>
+  &nbsp;&nbsp;&lt;div style="flex:1;"&gt;Sidebar&lt;/div&gt;<br>
+  &lt;/div&gt;
+  </code>`;
+            exampleEl.innerHTML = `
+  <div style="display:flex;">
+    <div style="flex:3; background:#eee; padding:5px;">Main Content</div>
+    <div style="flex:1; background:#f9f9f9; padding:5px;">Sidebar</div>
+  </div>`;
+          }
+
+          if (type === 'grid') {
+            codeEl.innerHTML = `<code>
+  &lt;div style="display:grid; grid-template-columns: 3fr 1fr;"&gt;<br>
+  &nbsp;&nbsp;&lt;div&gt;Main Content&lt;/div&gt;<br>
+  &nbsp;&nbsp;&lt;div&gt;Sidebar&lt;/div&gt;<br>
+  &lt;/div&gt;
+  </code>`;
+            exampleEl.innerHTML = `
+  <div style="display:grid; grid-template-columns: 3fr 1fr;">
+    <div style="background:#eee; padding:5px;">Main Content</div>
+    <div style="background:#f9f9f9; padding:5px;">Sidebar</div>
+  </div>`;
+          }
+        }
+      </script>
+
+    </div>
+  </template>
+
+</body>
+</html>
+
+<!-- 
+
+-->

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bubbles Templates</title>
+</head>
+<body>
+
+<!-- ======================== TEMPLATE: Form attributes. ======================== -->
+    
+
+    <template id="Form_Attributes">
+        <div class="bubble">
+            <h3>HTML Form Attributes & Input Form* Attributes</h3>
+
+            <div class="code-block">
+            <code>
+                &lt;form 
+                <span class="code-color1">action="submit.php"</span> 
+                <span class="code-color2">method="post"</span> 
+                <span class="code-color3">target="_blank"</span> 
+                <span class="code-color4">autocomplete="on"</span> 
+                <span class="code-color5">novalidate</span>&gt;<br>
+
+                &nbsp;&nbsp;&lt;label for="fname"&gt;First Name:&lt;/label&gt;<br>
+                &nbsp;&nbsp;&lt;input type="text" id="fname" name="fname" placeholder="John"&gt;<br><br>
+
+                &nbsp;&nbsp;&lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+                &nbsp;&nbsp;&lt;input type="email" id="email" name="email" placeholder="you@example.com"&gt;<br><br>
+
+                &nbsp;&nbsp;&lt;input type="submit" value="Submit (POST, new tab)"&gt;<br>
+                &lt;/form&gt;<br><br>
+
+                &lt;form id="form2" 
+                <span class="code-color1">action="submit_alt.php"</span> 
+                <span class="code-color2">method="get"</span> 
+                <span class="code-color3">target="_self"</span>&gt;<br>
+
+                &nbsp;&nbsp;&lt;label for="lname"&gt;Last Name:&lt;/label&gt;<br>
+                &nbsp;&nbsp;&lt;input type="text" id="lname" name="lname" placeholder="Doe"&gt;<br>
+                &lt;/form&gt;<br><br>
+
+                &lt;input type="submit" value="Submit (GET, same tab)" 
+                <span class="code-color6">form="form2" formaction="submit_alt.php" formmethod="get" formtarget="_self" formenctype="multipart/form-data" formnovalidate</span>&gt;
+            </code>
+            </div>
+
+            <div class="example">
+            <form id="form1" action="submit.php" method="post" target="_blank" autocomplete="on" novalidate onsubmit="return false;">
+                <label for="fname">First Name:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="John">
+                <span class="color-dot dot1"></span><span class="color-dot dot2"></span><span class="color-dot dot3"></span><span class="color-dot dot4"></span><span class="color-dot dot5"></span><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="you@example.com">
+                <span class="color-dot dot4"></span><br><br>
+
+                <input type="submit" value="Submit (POST, new tab)"><br><br>
+            </form>
+
+            <form id="form2" action="submit_alt.php" method="get" target="_self" onsubmit="return false;">
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Doe">
+                <span class="color-dot dot1"></span><span class="color-dot dot2"></span><span class="color-dot dot3"></span><br><br>
+            </form>
+
+            <input type="submit" value="Submit (GET, same tab)"
+                form="form2"
+                formaction="submit_alt.php"
+                formmethod="get"
+                formtarget="_self"
+                formenctype="multipart/form-data"
+                formnovalidate><span class="color-dot dot6"></span>
+            </div>
+
+            <p><strong>Explanation:</strong><br>
+            <span class="code-color1">- <code>action</code></span>: URL the form submits data to. If omitted, defaults to current page.<br>
+
+            <span class="code-color2">- <code>method</code></span>: Defines how data is sent.<br>
+            &nbsp;&nbsp;<strong>GET:</strong> Appends form data into the URL. You’ll see something like: <code>submit.php?lname=Doe</code><br>
+            &nbsp;&nbsp;- Good for search forms or when bookmarking is useful.<br>
+            &nbsp;&nbsp;- Unsafe for private data (like passwords) since it's visible in the URL.<br>
+            &nbsp;&nbsp;- URL size is limited (~2000 characters).<br>
+
+            &nbsp;&nbsp;<strong>POST:</strong> Sends form data in the HTTP request body (invisible to users).<br>
+            &nbsp;&nbsp;- Better for secure or long input.<br>
+            &nbsp;&nbsp;- Cannot be bookmarked.<br>
+            &nbsp;&nbsp;- Allows file uploads and more complex content.<br>
+
+            <span class="code-color3">- <code>target</code></span>: Where to display server response.<br>
+            &nbsp;&nbsp;- <code>_self</code>: current tab (default)<br>
+            &nbsp;&nbsp;- <code>_blank</code>: new tab<br>
+            &nbsp;&nbsp;- <code>_parent</code>, <code>_top</code>, or a named iframe<br>
+
+            <span class="code-color4">- <code>autocomplete</code></span>: Lets browser suggest past input.<br>
+            &nbsp;&nbsp;- <code>on</code>: Browser may autofill fields.<br>
+            &nbsp;&nbsp;- <code>off</code>: No autofill suggestions.<br>
+
+            <span class="code-color5">- <code>novalidate</code></span>: Tells browser to skip built-in validation.<br>
+            - For example, a required <code>email</code> input won't trigger a warning if left empty.<br>
+            - Useful for custom validation in JavaScript or testing.<br>
+
+            <strong>Input-level overrides (form*):</strong><br>
+            <span class="code-color6">- <code>form</code></span>: Links the input to a specific form by id.<br>
+            &nbsp;&nbsp;<em>Example:</em> A button outside the form with <code>form="form2"</code> can still submit it.<br>
+
+            <span class="code-color6">- <code>formaction</code></span>: Overrides the form's <code>action</code>.<br>
+            &nbsp;&nbsp;<em>Example:</em> Use one form with multiple submit buttons that go to different scripts.<br>
+
+            <span class="code-color6">- <code>formmethod</code></span>: Overrides <code>method</code> only for that input.<br>
+            &nbsp;&nbsp;<em>Example:</em> One submit button uses POST, another uses GET.<br>
+
+            <span class="code-color6">- <code>formtarget</code></span>: Overrides the form’s <code>target</code>.<br>
+            &nbsp;&nbsp;<em>Example:</em> A single button that opens result in a new tab.<br>
+
+            <span class="code-color6">- <code>formenctype</code></span>: Overrides encoding type for file uploads.<br>
+            &nbsp;&nbsp;<em>Example:</em> <code>multipart/form-data</code> for file inputs.<br>
+
+            <span class="code-color6">- <code>formnovalidate</code></span>: Skips validation for that input only.<br>
+            &nbsp;&nbsp;<em>Example:</em> A “Save Draft” button that allows incomplete data.
+            </p>
+        </div>
+    </template>
+
+</body>
+</html>
+
+<!-- 
+
+-->

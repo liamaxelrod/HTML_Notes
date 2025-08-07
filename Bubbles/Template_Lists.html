@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bubbles Templates</title>
+  </head>
+  <body>
+    
+    <!-- ======================== TEMPLATE: Lists ======================== -->
+    <template id="Lists">
+        <div class="bubble">
+            <h3>lists</h3>
+
+            <div class="code-block">
+            <code>
+                &lt;style&gt;<br>
+                &nbsp;&nbsp;ul, ol {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;list-style-position: inside;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 0;<br>
+                &nbsp;&nbsp;}<br>
+                &lt;/style&gt;<br><br>
+
+                &lt;ul&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Apples&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Bananas&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Cherries&lt;/li&gt;<br>
+                &lt;/ul&gt;<br><br>
+
+                &lt;ol&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Wake up&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Brush teeth&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Eat breakfast&lt;/li&gt;<br>
+                &lt;/ol&gt;
+            </code>
+            </div>
+
+            <div class="example">
+            <style>
+                ul, ol {
+                list-style-position: inside;
+                padding-left: 0;
+                }
+            </style>
+
+            <ul>
+                <li>Apples</li>
+                <li>Bananas</li>
+                <li>Cherries</li>
+            </ul>
+
+            <ol>
+                <li>Wake up</li>
+                <li>Brush teeth</li>
+                <li>Eat breakfast</li>
+            </ol>
+
+            <p>
+                <br>
+                Common list tags: <br>
+                <code>&lt;ul&gt;</code> unordered list (bullets) <br>
+                <code>&lt;ol&gt;</code> ordered list (numbers) <br>
+                <code>&lt;li&gt;</code> list item <br>
+                <code>&lt;dl&gt;</code> description list <br>
+                <code>&lt;dt&gt;</code> definition term <br>
+                <code>&lt;dd&gt;</code> definition description <br><br>
+
+                <b>Style:</b> <code>list-style-position: inside;</code> keeps bullets/numbers inside the box, preventing overflow.<br>
+                <code>padding-left: 0;</code> removes default indent for neat alignment.
+            </p>
+            </div>
+        </div>
+    </template>
+
+  </body>
+</html>

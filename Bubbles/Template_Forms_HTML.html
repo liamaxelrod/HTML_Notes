@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bubbles Templates</title>
+</head>
+<body>
+
+ <!-- ======================== TEMPLATE: HTML forms.
+ ======================== -->
+
+ 
+
+  <template id="HTML_forms">
+    <div class="bubble">
+      <h3>HTML Forms & Input Types</h3>
+
+      <div class="code-block">
+        <code>
+    <span class="code-color1">&lt;input type="text" id="fname" name="fname" placeholder="John"&gt;</span><br>
+    <span class="code-color1">&lt;input type="text" id="lname" name="lname" placeholder="Doe"&gt;</span><br><br>
+
+    <span class="code-color2">&lt;input type="password" placeholder="Enter password" name="pwd"&gt;</span><br><br>
+
+    <span class="code-color3">&lt;input type="email" placeholder="you@example.com"&gt;</span><br><br>
+
+    <span class="code-color7">&lt;input type="date"&gt;</span><br>
+    <span class="code-color7">&lt;input type="color"&gt;</span><br><br>
+
+    <span class="code-color8">&lt;input type="text" value="Readonly" readonly&gt;</span><br>
+    <span class="code-color8">&lt;input type="text" value="Disabled" disabled&gt;</span><br><br>
+
+    <span class="code-color5">&lt;input type="radio" name="fav_lang" value="HTML"&gt; HTML<br>
+    &lt;input type="radio" name="fav_lang" value="CSS"&gt; CSS<br>
+    &lt;input type="radio" name="fav_lang" value="JS"&gt; JavaScript</span><br><br>
+
+    <span class="code-color6">&lt;input type="checkbox" name="vehicle1" value="Bike"&gt; I have a bike<br>
+    &lt;input type="checkbox" name="vehicle2" value="Car"&gt; I have a car<br>
+    &lt;input type="checkbox" name="vehicle3" value="Boat"&gt; I have a boat</span><br><br>
+
+    <span class="code-color4">&lt;input type="submit" value="Submit (does not submit)"&gt;<br>
+    &lt;input type="reset"&gt;<br>
+    &lt;input type="button" value="Click Me"&gt;</span>
+        </code>
+      </div>
+
+      <div class="example">
+        <form onsubmit="return false;" action="action_page.php" method="post">
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" name="fname" placeholder="John"><span class="color-dot dot1"></span><br><br>
+
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" name="lname" placeholder="Doe"><span class="color-dot dot1"></span><br><br>
+
+          <input type="password" placeholder="Enter password" name="pwd"><span class="color-dot dot2"></span><br><br>
+
+          <input type="email" placeholder="you@example.com"><span class="color-dot dot3"></span><br><br>
+
+          <input type="date"><span class="color-dot dot7"></span><br><br>
+          <input type="color"><span class="color-dot dot7"></span><br><br>
+
+          <input type="text" value="Readonly" readonly><span class="color-dot dot8"></span>
+          <input type="text" value="Disabled" disabled><span class="color-dot dot8"></span><br><br>
+
+          <input type="radio" name="fav_lang" value="HTML"> HTML<span class="color-dot dot5"></span><br>
+          <input type="radio" name="fav_lang" value="CSS"> CSS<span class="color-dot dot5"></span><br>
+          <input type="radio" name="fav_lang" value="JS"> JavaScript<span class="color-dot dot5"></span><br><br>
+
+          <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<span class="color-dot dot6"></span><br>
+          <input type="checkbox" name="vehicle2" value="Car"> I have a car<span class="color-dot dot6"></span><br>
+          <input type="checkbox" name="vehicle3" value="Boat"> I have a boat<span class="color-dot dot6"></span><br><br>
+
+          <input type="submit" value="Submit (does not submit)"><span class="color-dot dot4"></span>
+          <input type="reset"><span class="color-dot dot4"></span>
+          <input type="button" value="Click Me"><span class="color-dot dot4"></span>
+        </form>
+      </div>
+
+      <p><strong>Explanation:</strong><br>
+        <span class="ex-color1">- Text inputs</span> ask for user text and support placeholders.<br>
+        <span class="ex-color2">- Password inputs</span> hide user text for privacy.<br>
+        <span class="ex-color3">- Email inputs</span> provide validation for email format.<br>
+        <span class="ex-color7">- Date and color inputs</span> give specialized UI controls.<br>
+        <span class="ex-color8">- Readonly fields</span> A readonly field is like a form box that shows information you can read and highlight, but you can’t change it. For example, imagine a form showing your user ID number.<br>
+        <span class="ex-color8">- Disabled fields</span> A disabled field looks “greyed out” and you can’t click on or type in it at all. It’s like the form is saying, “You can’t use this box right now.” For example, if a survey question doesn’t apply to you, the box might be disabled so you can’t fill it in. Also, the value inside a disabled box won’t be sent when you submit the form.<br>
+        <span class="ex-color5">- Radio buttons</span> allow selecting one option from many.<br>
+        <span class="ex-color6">- Checkboxes</span> allow multiple selections.<br>
+        <span class="ex-color4">- Submit button</span> normally sends data to the server, but here it does not submit.<br>
+        <span class="ex-color4">- Reset button</span> resets fields to their default values.<br>
+        <span class="ex-color4">- Button type</span> creates a clickable button with no default behavior.<br>
+        - The form itself is invisible aside from input controls.<br>
+      </p>
+    </div>
+
+  </template>
+
+</body>
+</html>
+
+<!-- 
+
+-->

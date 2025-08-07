@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bubbles Templates</title>
+</head>
+<body>
+
+    <!-- ======================== TEMPLATE: HTML Responsive Web Design
+ ======================== -->
+
+    <template id="Responsive">
+        <div class="bubble">
+
+            <h3>Responsive Viewport Meta Tag</h3>
+
+            <!-- Code Block Showing Where to Place the Code -->
+            <div class="code-block">
+            <code>
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html lang="en"&gt;<br>
+                &lt;head&gt;<br>
+                &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                &nbsp;&nbsp;<mark>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</mark><br>
+                &nbsp;&nbsp;&lt;title&gt;Responsive Example&lt;/title&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br>
+                &nbsp;&nbsp;&lt;h1&gt;Hello World&lt;/h1&gt;<br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;
+            </code>
+            </div>
+
+            <!-- Explanation of What the Code Does -->
+            <div class="example">
+            <p><strong>What this does:</strong></p>
+            <p>This line of code tells the browser to set the page width to the screen width of the device and to start with the default zoom level (scale 1.0).</p>
+
+            <p><strong>Why it matters:</strong></p>
+            <p>Without it, phones and tablets will treat your webpage like a desktop site and zoom out, making everything small and unreadable. With it, the layout and text adapt better to smaller screens.</p>
+
+            <p><strong>How it connects to CSS:</strong></p>
+            <p>This tag works with your CSS rules. For example, if you use relative units like percentages, <code>vw</code>, <code>em</code>, or media queries, the browser knows how wide the "viewport" is and can adjust styles correctly. This is the first step to making a responsive layout that adapts to phones, tablets, and desktops.</p>
+
+            <p><strong>Do you need different styles for different devices?</strong></p>
+            <p>Most of the time, you only need one flexible, well-designed style that adapts naturally. Use relative units, flexbox, grid, and responsive images. Then, optionally, use <code>@media</code> queries to adjust layout or font size for very small or very large screens. You don't need separate styles for phones, tablets, and desktops — just one smart base plus small tweaks.</p>
+            </div>
+
+        </div>
+    </template>
+
+</body>
+</html>
+
+<!-- 
+
+-->
