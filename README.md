@@ -14,7 +14,7 @@ Also, I do have plans To refresh my knowledge on other coding languages and lear
 
 ###### Links
 
-**Link to vercel:**
+**Link to The website:**
 
 https://liam-axelrod-html-notes.vercel.app/
 
